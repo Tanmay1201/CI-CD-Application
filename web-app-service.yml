@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: web-app-service
+spec:
+  selector:
+    app: webservers
+  type: LoadBalancer
+  ports:
+    - name: web-app-port
+      port: 5001
+      targetPort: 80
